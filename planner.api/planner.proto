@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package actionplanner;
+
+// Interface exported by the server.
+service Planner {
+  rpc GetStatus(StatusQuery) returns (Status) {}
+}
+
+message StatusQuery {}
+
+message Status {
+   string status = 1;
+}
